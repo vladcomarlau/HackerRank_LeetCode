@@ -1,7 +1,6 @@
 # HackerRank
-My solutions for HackerRank practice problems
+My own solutions to HackerRank practice problems
 
-| Problem      | Category     | Difficulty   |
-|--------------|--------------|--------------|
-| Content Cell | Content Cell | Content Cell |
-| Content Cell | Content Cell | Content Cell |
+| ID | Problem | Subdomain | Difficulty | Description |
+|----|---------|-----------|------------|-------------|
+| p1 | TBD     | TBD       | TBD        | TBD         |

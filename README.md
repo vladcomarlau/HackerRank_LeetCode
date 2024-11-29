@@ -1,5 +1,5 @@
-# HackerRank
-My own solutions to HackerRank practice problems
+# HackerRank / LeetCode
+My own solutions to HackerRank and LeetCode practice problems
 
 | ID | Problem | Subdomain | Difficulty | Description |
 |----|---------|-----------|------------|-------------|

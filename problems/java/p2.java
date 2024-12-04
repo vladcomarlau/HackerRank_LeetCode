@@ -1,7 +1,12 @@
 package problems.java;
 
+import org.junit.jupiter.api.Test;
+
 import java.lang.reflect.Array;
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /*
 https://leetcode.com/problems/h-index
 H-INDEX
@@ -45,15 +50,21 @@ public class p2 {
         return 0;
     }
 
-    public static void main(String[] args) {
-        System.out.println("expected: 3; " + hIndex(new int[]{3,0,6,1,5}));
-        System.out.println("");
-        System.out.println("expected: 1; " + hIndex(new int[]{1,3,1}));
-        System.out.println("");
-        System.out.println("expected: 0; " + hIndex(new int[]{0}));
-        System.out.println("");
-        System.out.println("expected: 1; " + hIndex(new int[]{1}));
-        System.out.println("");
-        System.out.println("expected: 2; " + hIndex(new int[]{11, 15}));
+    @Test
+    public void test() {
+        int result = hIndex(new int[]{3,0,6,1,5});
+        assertEquals(3, result, "H-Index of [3,0,6,1,5]");
+
+        result = hIndex(new int[]{1,3,1});
+        assertEquals(1, result, "H-Index of [1,3,1]");
+
+        result = hIndex(new int[]{0});
+        assertEquals(0, result, "H-Index of [0]");
+
+        result = hIndex(new int[]{1});
+        assertEquals(1, result, "H-Index of [1]");
+
+        result = hIndex(new int[]{11, 15});
+        assertEquals(2, result, "H-Index of [11, 15]");
     }
 }

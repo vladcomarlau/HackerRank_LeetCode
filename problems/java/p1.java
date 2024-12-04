@@ -1,6 +1,15 @@
 package problems.java;
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /* https://leetcode.com/problems/median-of-two-sorted-arrays
 Median of Two Sorted Arrays
@@ -40,9 +49,16 @@ public class p1 {
         }
     }
 
-    public static void main(String[] args) {
-       System.out.println("median: " + findMedianSortedArrays(new int[]  {1,3}, new int[] {2}));
-       System.out.println("median: " + findMedianSortedArrays(new int[]  {1,2}, new int[] {3,4}));
-       System.out.println("median: " + findMedianSortedArrays(new int[]  {2,2,4,4}, new int[] {2,2,2,4,4}));
+    @Disabled
+    @Test
+    public void test() {
+        double result = findMedianSortedArrays(new int[]{1, 3}, new int[]{2});
+        assertEquals(2.0, result, "Median of {1,3} {2}");
+
+        result = findMedianSortedArrays(new int[]{1, 2}, new int[]{3,4});
+        assertEquals(2.5, result, "Median of {1,2} {3,4}");
+
+        result = findMedianSortedArrays(new int[]{2,2,4,4}, new int[]{2,2,2,4,4});
+        assertEquals(2.0, result, "Median of {2,2,4,4} {2,2,2,4,4}");
     }
 }

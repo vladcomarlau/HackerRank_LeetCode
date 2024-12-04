@@ -3,6 +3,8 @@ package problems.java;
 import java.lang.reflect.Array;
 import java.util.*;
 /*
+https://leetcode.com/problems/h-index
+H-INDEX
 Given an array of integers citations where citations[i] is the number of citations a researcher received for their ith paper, return the researcher's h-index.
 
 According to the definition of h-index on Wikipedia: The h-index is defined as the maximum value of h such that the given researcher has published at least h papers that have each been cited at least h times.
@@ -27,8 +29,8 @@ n == citations.length
 public class p2 {
     public static int hIndex(int[] citations) {
         ArrayList<Integer> sorted = new ArrayList<>();
-        for(int i = 0; i < citations.length; i++) {
-            sorted.add(citations[i]);
+        for (int citation : citations) {
+            sorted.add(citation);
         }
         Collections.sort(sorted, Collections.reverseOrder());
 

@@ -60,7 +60,7 @@ public class p3 {
             s+=(" " + current.val);
         }
         s+=("]");
-        return s.toString();
+        return s;
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {

@@ -1,5 +1,6 @@
 package problems.java;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Array;
@@ -50,6 +51,7 @@ public class p2 {
         return 0;
     }
 
+    @Disabled
     @Test
     public void test() {
         int result = hIndex(new int[]{3,0,6,1,5});

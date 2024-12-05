@@ -34,7 +34,6 @@ public class p3 {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode() {}
         ListNode(int val) { this.val = val; }
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
         @Override
@@ -110,21 +109,16 @@ public class p3 {
 
     @Test
     public void test() {
-        ListNode head;
-        head = generateList(1,5);
-        head = reverseKGroup(head, 2);
+        ListNode head= reverseKGroup(generateList(1,5), 2);
         Assertions.assertEquals("[2 1 4 3 5]", showList(head), "[1 2 3 4 5]; k=2");
 
-        head = generateList(1,5);
-        head = reverseKGroup(head, 3);
+        head = reverseKGroup(generateList(1,5), 3);
         Assertions.assertEquals("[3 2 1 4 5]", showList(head), "[1 2 3 4 5]; k=3");
 
-        head = generateList(1,5);
-        head = reverseKGroup(head, 1);
+        head = reverseKGroup(generateList(1,5), 1);
         Assertions.assertEquals("[1 2 3 4 5]", showList(head), "[1 2 3 4 5]; k=1");
 
-        head = generateList(1,2);
-        head = reverseKGroup(head, 2);
+        head = reverseKGroup(generateList(1,2), 2);
         Assertions.assertEquals("[2 1]", showList(head), "[1 2]; k=2");
     }
 }
